@@ -1,0 +1,23 @@
+`timescale 1ns/1ps
+module tb_alu;
+reg [7:0] a,b;
+reg [2:0] s;
+wire [15:0] y;
+alu DUT(
+     .a(a),
+     .b(b),
+     .s(s),
+     .y(y)
+);
+initial begin
+   a=8'd6; b=8'd3; s=3'd0;
+  #10 b=8'd4; s=3'd1;
+  #10 b=8'd4; s=3'd2;
+  #10 b=8'd4; s=3'd3;
+  #10 b=8'd4; s=3'd4;
+  #10 b=8'd4; s=3'd5;
+  #10 b=8'd4; s=3'd6;
+  #10 b=8'd4; s=3'd7;
+   end
+endmodule
+   
