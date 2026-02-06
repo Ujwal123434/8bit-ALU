@@ -66,7 +66,7 @@ The design can be simulated using:
 3. Set `alu_tb.v` as the top module.
 4. Click **Run Simulation** → **Run Behavioral Simulation**.
 5. Observe the waveform window.
-6. Click **Open Elborated Design ** → **Schematic**.
+6. Click **Open Elborated Design** → **Schematic**.
 7. Observe the schematic of design 
 8. Verify that the output matches the expected ALU operation for each select input.
 
