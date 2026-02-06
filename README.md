@@ -41,8 +41,8 @@ The design is verified through simulation using a Verilog testbench.
 ├── tb/
 │   └── alu_tb.v     # Testbench
 ├── sim/
-    └── simulation result
-    └── waveform
+|    └── simulation result
+|    └── waveform
 │
 └── README.md
 ```
