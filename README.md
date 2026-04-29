@@ -1,33 +1,37 @@
-# 8-bit ALU in Verilog
+# 8-bit ALU with Status Flags
 
 ## Overview
-This project implements an 8-bit Arithmetic Logic Unit (ALU) using Verilog HDL.  
-The ALU performs arithmetic and logical operations based on a 3-bit select input.  
-The design is verified through simulation using a Verilog testbench.
+An 8-bit Arithmetic Logic Unit (ALU) designed in Verilog HDL that supports 8 operations including arithmetic, logical, and bitwise functions. The ALU also generates four essential status flags — Carry, Zero, Sign, and Overflow — which are critical for processor-level decision making and conditional branching in digital systems.
 
 ---
 
-## Features
-- 8-bit input operands
-- 16-bit output result
-- Combinational ALU design
-- Verilog RTL implementation
-- Testbench-based functional verification
+## Module Overview
+
+| Port | Direction | Width | Description |
+|------|-----------|-------|-------------|
+| `a` | input | 8-bit | Operand A |
+| `b` | input | 8-bit | Operand B |
+| `s` | input | 3-bit | Operation select |
+| `y` | output | 16-bit | Result |
+| `carry` | output | 1-bit | Carry flag |
+| `zero` | output | 1-bit | Zero flag |
+| `sign` | output | 1-bit | Sign flag |
+| `overflow` | output | 1-bit | Overflow flag |
 
 ---
 
-## ALU Operations
+## Operations
 
-| Select (s[2:0]) | Operation        | Description |
-|-----------------|------------------|-------------|
-| 000             | Addition         | a + b |
-| 001             | Subtraction      | a − b |
-| 010             | Bitwise NOT      | ~a |
-| 011             | Multiplication   | a × b |
-| 100             | Bitwise AND      | a & b |
-| 101             | Bitwise OR       | a \| b |
-| 110             | Bitwise NAND     | ~(a & b) |
-| 111             | Bitwise XOR      | a ^ b |
+| s | Operation | Description |
+|---|-----------|-------------|
+| 3'd0 | `a + b` | Addition |
+| 3'd1 | `a - b` | Subtraction |
+| 3'd2 | `~a` | Bitwise NOT |
+| 3'd3 | `a * b` | Multiplication |
+| 3'd4 | `a & b` | Bitwise AND |
+| 3'd5 | `a \| b` | Bitwise OR |
+| 3'd6 | `~(a & b)` | Bitwise NAND |
+| 3'd7 | `a ^ b` | Bitwise XOR |
 
 ---
 
@@ -46,7 +50,6 @@ The design is verified through simulation using a Verilog testbench.
 │
 └── README.md
 ```
-
 ## Simulation
 
 Functional verification of the 8-bit ALU is performed using a Verilog testbench.
@@ -76,7 +79,7 @@ The design can be simulated using:
 
 
 
+## Tools Used
 
-
-
-
+- Language  : Verilog HDL
+- Simulator : ModelSim / Icarus Verilog
