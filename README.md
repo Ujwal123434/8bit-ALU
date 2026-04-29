@@ -77,9 +77,3 @@ The design can be simulated using:
 - All ALU operations were verified through waveform analysis.
 - The design functions correctly for all select input combinations.
 
-
-
-## Tools Used
-
-- Language  : Verilog HDL
-- Simulator : ModelSim / Icarus Verilog
