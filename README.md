@@ -40,13 +40,17 @@ An 8-bit Arithmetic Logic Unit (ALU) designed in Verilog HDL that supports 8 ope
 8bit-alu-verilog/
 │
 ├── rtl/
-│   └── alu.v        # ALU RTL code
+│   └── alu.v
+|   └── alu_without_flags.v        # ALU RTL code
 │
 ├── tb/
-│   └── alu_tb.v     # Testbench
+│   └── alu_tb.v
+|   └── alu_tb_without_flags.v      # Testbench
 ├── sim/
 |    └── simulation result
+|    └── simulation result_without_flags 
 |    └── waveform
+|    └── waveform_without_flags
 │
 └── README.md
 ```
